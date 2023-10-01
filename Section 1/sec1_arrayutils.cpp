@@ -1,6 +1,6 @@
 #include "sec1_header.h"
 
-vector<int> gen_rand_arr(int size)
+vector<int> gen_rand_arr(int size) 
 {
     vector<int> arr(size);
     for (int i = 0; i < size; ++i)
