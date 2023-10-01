@@ -1,4 +1,4 @@
-# pragma once
+# pragma once 
 #include <iostream>
 #include <vector>
 #include <algorithm> //! Standard C++ algorithm library for sorting
