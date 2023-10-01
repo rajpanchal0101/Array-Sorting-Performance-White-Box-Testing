@@ -1,6 +1,6 @@
 #include "sec1_arrayutils.cpp"
 
-int main()
+int main()  
 {
     srand(time(0)); //! Seeds the random number generator with the current time
 
