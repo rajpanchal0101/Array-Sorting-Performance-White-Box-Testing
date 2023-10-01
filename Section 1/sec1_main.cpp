@@ -2,7 +2,7 @@
 
 int main()
 {
-    srand(time(0));
+    srand(time(0)); //! Seeds the random number generator with the current time
 
     int arr_size[num_size] = {100000, 1000000, 10000000};
     string ord_typ[num_size] = {"Random Order", "Ascending Order", "Descending Order"};
@@ -22,18 +22,18 @@ int main()
         }
         cout << "-----------------------------------------------------------------------------------------------------------------" << endl;
 
-        vector<vector<double>> res_count(3, vector<double>(num_iter, 0));
+        vector<vector<double>> res_count(3, vector<double>(num_iter, 0)); //! Its a 2D vector to store sorting times
 
         for (int test = 0; test < num_iter; ++test)
         {
-            vector<int> rand_arr = gen_rand_arr(size);
-            res_count[0][test] = meas_sortime(rand_arr);
-            res_count[1][test] = meas_sortime(rand_arr);
-            reverse(rand_arr.begin(), rand_arr.end());
-            res_count[2][test] = meas_sortime(rand_arr);
+            vector<int> rand_arr = gen_rand_arr(size);    //! Generates a random array
+            res_count[0][test] = meas_sortime(rand_arr);  //! Measures sorting time on a random array
+            res_count[1][test] = meas_sortime(rand_arr);  //! Measures sorting time on the same random array (ascending order)
+            reverse(rand_arr.begin(), rand_arr.end());    //! Sorted array gets reversed
+            res_count[2][test] = meas_sortime(rand_arr);  //! Measures sorting time on the reversed array
         }
 
-        // Print the res_counts in a table format
+        //! Prints the result in a table format with proper indentation and width
         cout << left << setw(16) << "Arrays" << setw(10) << "Array1" << setw(10) << "Array2" << setw(10) << "Array3" << setw(10) << "Array4" << setw(10) << "Array5" << setw(10) << "Array6" << setw(10) << "Array7" << setw(10) << "Array8" << setw(10) << "Array9" << setw(10) << "Array10" << endl;
         cout << "-----------------------------------------------------------------------------------------------------------------" << endl;
 
@@ -41,10 +41,10 @@ int main()
          {
             string ord_type = (i == 0) ? "Random Time(s)" : (i == 1) ? "Ordered Time(s)" : "Reverse Time(s)";
             cout << left << setw(17) << ord_type;
-            
+
             for (int test = 0; test < num_iter; ++test)
             {
-                cout << fixed << setprecision(2) << setw(10) << res_count[i][test];
+                cout << fixed << setprecision(2) << setw(10) << res_count[i][test]; //! Prints sorting times with 2 decimal places
             }
             cout << endl << endl;
          }
