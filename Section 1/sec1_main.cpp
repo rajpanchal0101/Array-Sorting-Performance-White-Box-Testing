@@ -10,8 +10,16 @@ int main()
     for (int size_idx = 0; size_idx < num_size; ++size_idx)
      {
         int size = arr_size[size_idx];
+        cout << "-----------------------------------------------------------------------------------------------------------------" << endl;
 
-        cout << "Array Size: " << size << endl;
+        if(size == 10000000)
+        {
+         cout << "Array Size: " << size << " (Please wait for few minutes as computation could take some time as it's a large array)" << endl;
+        }
+        else
+        {
+         cout << "Array Size: " << size << endl;
+        }
         cout << "-----------------------------------------------------------------------------------------------------------------" << endl;
 
         vector<vector<double>> res_count(3, vector<double>(num_iter, 0));
@@ -28,10 +36,12 @@ int main()
         // Print the res_counts in a table format
         cout << left << setw(16) << "Arrays" << setw(10) << "Array1" << setw(10) << "Array2" << setw(10) << "Array3" << setw(10) << "Array4" << setw(10) << "Array5" << setw(10) << "Array6" << setw(10) << "Array7" << setw(10) << "Array8" << setw(10) << "Array9" << setw(10) << "Array10" << endl;
         cout << "-----------------------------------------------------------------------------------------------------------------" << endl;
+
         for (int i = 0; i < 3; ++i)
          {
             string ord_type = (i == 0) ? "Random Time(s)" : (i == 1) ? "Ordered Time(s)" : "Reverse Time(s)";
             cout << left << setw(17) << ord_type;
+            
             for (int test = 0; test < num_iter; ++test)
             {
                 cout << fixed << setprecision(2) << setw(10) << res_count[i][test];
