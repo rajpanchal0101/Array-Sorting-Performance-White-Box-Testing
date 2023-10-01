@@ -1,5 +1,18 @@
+/**
+1) Module Name: sec1_main.cpp
+2) Author: Raj Panchal (rjp659@uregina.ca)
+3) Date of creation: 2023-10-01
+4) Purpose:This is the file which consists of the main function from where the compilation of the program commences.
+*/
+
 #include "sec1_arrayutils.cpp"
 
+/**
+1) Purpose:This is the main function from where the program's compilation begins and various user defined functions are invoked here based on the requirement.
+2) Parameters: None
+3) Return type: int
+4) Side Effect: None
+*/
 int main()  
 {
     srand(time(0)); //! Seeds the random number generator with the current time
@@ -9,7 +22,7 @@ int main()
 
     for (int size_idx = 0; size_idx < num_size; ++size_idx)
      {
-        int size = arr_size[size_idx];
+        int size = arr_size[size_idx]; 
         cout << "-----------------------------------------------------------------------------------------------------------------" << endl;
 
         if(size == 10000000)

@@ -1,6 +1,13 @@
+/**
+1) Module Name: sec1_arrayutils.cpp
+2) Author: Raj Panchal (rjp659@uregina.ca)
+3) Date of creation: 2023-10-01
+4) Purpose:This is the file which consists of implementation of the various functions declared in the header file.
+*/
+
 #include "sec1_header.h"
 
-vector<int> gen_rand_arr(int size) 
+vector<int> gen_rand_arr(int size)  
 {
     vector<int> arr(size);
     for (int i = 0; i < size; ++i)
