@@ -1,4 +1,4 @@
-# CS700 - Assignment 2 
+# CS700 - Assignment 2  
 
 *Description - This assignment consists of two sections, each focusing on different programming tasks. Section 1 involves examining the effects of array size and initial data order by noting the time taken for sorting the array, while Section 2 focuses on implementing white-box testing on a given program for validating floating-point error tolerance for certain user defined trigonometric functions. Below are the details of each section :
 
